@@ -2,7 +2,7 @@
 using namespace std ;
 int main ()
 {
-    int n,arr[1000],sum;
+    int n,arr[1000],sum=0;
     cout<<"Input array size:";
     cin>>n;
     cout<<"Input element:";
@@ -18,4 +18,5 @@ int main ()
 
     return 0;
 }
+
 
