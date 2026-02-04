@@ -12,10 +12,10 @@ int main ()
     }
     for (int j=0;j<n;j++)
     {
-        sum=0;
         sum=sum+arr[j];
     }
      cout<<"Sum of the array element is :"<<sum;
 
     return 0;
 }
+
