@@ -1,0 +1,70 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int q[5],size=5;
+   int fornt =-1,rear=-1;
+
+
+    void enqueue (int value )
+   {
+    if (rear==size-1)
+    {
+         cout<<"queue is over flow "<<endl;
+         return;
+    }
+    if (fornt==-1)
+    {
+        fornt= 0;
+    }
+        rear++;
+        q[rear]=value;
+   }
+
+
+   void dequeue()
+   {
+    if (fornt==-1||fornt>rear)
+    {
+        cout<<"Queue is under flow"<<endl;
+        return;
+    }
+    cout<<q[fornt]<<" Dequeue successfull"<<endl;
+    fornt++;
+    if (fornt>rear)
+    {
+        fornt=rear=-1;
+    }
+   }
+    void display()
+    {
+        if(fornt==-1)
+        
+        {
+            cout<<"Queue is empty"<<endl;
+            return;
+        }
+        
+
+        for(int i=fornt;i<=rear;i++){
+            cout<<q[i]<<" ";
+        }
+        cout<<endl;
+        
+    }
+
+   
+
+
+int main() {
+    
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    display();
+    dequeue();
+    dequeue();
+    display();
+
+    return 0;
+}
